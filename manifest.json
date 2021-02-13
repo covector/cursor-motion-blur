@@ -7,14 +7,14 @@
         {
           "matches": ["http://*/*", "https://*/*"],
           "css": ["moblur-style.css"],
-          "js": ["lib/jquery.js", "lib/gsap.js", "moblur-script.js"]
+          "js": ["lib/jquery.js", "lib/gsap.js", "moblur-script.js"],
+          "run_at": "document_end"
         }
     ],
     "web_accessible_resources": [{
-        "resources": ["cursor.cur"],
+        "resources": ["cursor.png"],
         "matches": [],
-        "extension_ids": [],
-        "run_at": "document_end"
+        "extension_ids": []
     }],
     "icons": {
         "16": "/icons/moblur-icon_16.png",

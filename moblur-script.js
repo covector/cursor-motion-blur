@@ -1,7 +1,8 @@
-const samples = 30;
-const delay = 1/750;
-const opacity = "8%";
-const width = "32px";
+const samples = 32;
+const delay = 1/1500;
+const duration = 0.05
+const opacity = "3%";
+const width = "12px";
 
 function initContainer() {
     let con = $(document.createElement("div"));
@@ -10,7 +11,7 @@ function initContainer() {
 }
 
 function initCursors() {
-    let cursorURL = chrome.runtime.getURL("cursor.cur");
+    let cursorURL = chrome.runtime.getURL("cursor.png");
     for (let i = 0; i < samples; i++) {
         let cursor = $(document.createElement("img"));
         cursor.attr({
@@ -27,7 +28,7 @@ function initCursors() {
 
 function updateCursors(e) {
     $(".cursor").each(function(ind) {
-        gsap.to($(this), {duration: 0.05, delay: ind * delay, x: e.clientX, y: e.clientY});
+        gsap.to($(this), {duration: duration, delay: ind * delay, x: e.clientX, y: e.clientY});
     });
 }
 
