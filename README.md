@@ -1,6 +1,6 @@
 # Cursor Motion Blur
 This is a Chrome extension that adds motion blur to your cursor.<br />
-![Icon](docs-img/moblur-icon.png)<br />
+![Demo](docs-img/moblur.gif)<br />
 [Options](#options)
 - [Cursor width](#cursor-width)
 - [Opacity](#opacity)
