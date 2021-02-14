@@ -17,6 +17,7 @@ body {
 }
 
 .moblur-ext_cursor {
+    filter: none !important;
     image-rendering: pixelated;
     pointer-events: none;
     position: absolute;
