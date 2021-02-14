@@ -8,7 +8,6 @@ function setConst () {
     width = $("#width").val();
     tradeoff = $("#tradeoff").prop("checked");
     img = $("#preview").attr("src");
-    console.log(opacity);
 }
 
 function initCursors() {
@@ -48,7 +47,6 @@ function resetArea() {
 }
 
 function updateArea() {
-    console.log("change");
     resetArea();
     setConst();
     initCursors();
