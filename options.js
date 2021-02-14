@@ -161,7 +161,7 @@ function save() {
     
     chrome.storage.sync.set(pref, ()=> {
         let error = chrome.runtime.lastError?.message;
-        if (error) { alert(error); }
+        alert(error ? error : "Saved Successfully");
     });
 }
 
