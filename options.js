@@ -64,20 +64,28 @@ function initValues() {
             initCheck(id, pref[id] ?? defaultVal[id]);
         }
         initImg(pref["img"] ?? defaultVal["img"]);
+        updateArea();
     });
 }
 
 function resetInput(id) {
     $(`#${id}`).val(defaultVal[id]);
+    updateArea();
 }
 
 function resetCheckBox(id) {
     $(`#${id}`).prop("checked", defaultVal[id]);
+    updateArea();
+}
+
+function inputChange() {
+    updateArea();
 }
 
 const reader = new FileReader();
 reader.addEventListener("load", function () {
     $("#preview").attr("src", reader.result);
+    updateArea();
 }, false);
 function setImg(id) {
     let file = document.getElementById(id).files[0];
@@ -88,6 +96,7 @@ function setImg(id) {
 function resetImg(id) {
     document.getElementById(id).value = null;
     $("#preview").attr("src", defaultVal[id]);
+    updateArea();
 }
 
 function validate(id, data) {
@@ -168,11 +177,13 @@ function save() {
 function initEventListener() {
     for (let i = 0; i < inputOptions.length; i++) {
         let id = inputOptions[i];
-        $(`#${id}_button`).on("click", ()=>resetInput(id))
+        $(`#${id}_button`).on("click", ()=>resetInput(id));
+        $(`#${id}`).on("change", updateArea);
     }
     for (let i = 0; i < checkOptions.length; i++) {
         let id = checkOptions[i];
-        $(`#${id}_button`).on("click", ()=>resetCheckBox(id))
+        $(`#${id}_button`).on("click", ()=>resetCheckBox(id));
+        $(`#${id}`).on("change", updateArea);
     }
     $("#img").on("change", ()=>setImg("img"));
     $("#img_button").on("click", ()=>resetImg("img"));

@@ -1,9 +1,9 @@
-.moblur-ext_nocursor {
-    cursor: none;
-}
-
 body {
     margin: 0;
+}
+
+.moblur-ext_nocursor {
+    cursor: none;
 }
 
 #moblur-ext_cursors-container {
@@ -17,7 +17,7 @@ body {
 }
 
 .moblur-ext_cursor {
-    image-rendering: crisp-edges;
+    image-rendering: pixelated;
     pointer-events: none;
     position: absolute;
     top: 0;
