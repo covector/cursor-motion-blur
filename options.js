@@ -65,6 +65,7 @@ function initValues() {
         }
         initImg(pref["img"] ?? defaultVal["img"]);
         updateArea();
+        setBG();
     });
 }
 
@@ -188,6 +189,26 @@ function initEventListener() {
     $("#img").on("change", ()=>setImg("img"));
     $("#img_button").on("click", ()=>resetImg("img"));
     $("#save_button").on("click", ()=>save());
+    $("#invert").on("click", toggleBG);
+}
+
+let darkMode = true;
+function toggleBG() {
+    darkMode = !darkMode;
+    setBG();
+}
+
+function setBG() {
+    if (darkMode) {
+        $("#invert").removeClass("light").addClass("dark");
+        $("#testing").removeClass("light").addClass("dark");
+        $("#previewArea").removeClass("light").addClass("dark");
+    }
+    else {
+        $("#invert").removeClass("dark").addClass("light");
+        $("#testing").removeClass("dark").addClass("light");
+        $("#previewArea").removeClass("dark").addClass("light");
+    }
 }
 
 function init() {

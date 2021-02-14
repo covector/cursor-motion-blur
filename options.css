@@ -54,6 +54,10 @@ div.vert {
     cursor: pointer;
     font-family: inherit;
     font-weight: inherit;
+    transition: background-color 0.2s;
+}
+.reset:hover {
+    background-color: rgb(182, 79, 79);
 }
 .title {
     margin-bottom: 20px;
@@ -67,22 +71,71 @@ div.vert {
     cursor: pointer;
     font-family: inherit;
     font-weight: inherit;
+    transition: background-color 0.2s;
+}
+.save:hover {
+    background-color: rgb(77, 179, 99);
 }
 div#testing {
     position: relative;
     margin-bottom: 40px;
     width: 500px;
     height: 350px;
-    background-color: rgb(24, 24, 24);
     font-family: inherit;
     font-weight: inherit;
     font-size: 14px;
     color: white;
     text-align: center;
+    transition: background-color 0.2s;
 }
-
+div#testing.dark {
+    background-color: rgb(24, 24, 24);
+}
+div#testing.light {
+    background-color: rgb(251, 251, 251);
+}
+div.overlay {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+div#previewArea {
+    transition: color 0.2s;
+}
+div#previewArea.light {
+    color: rgb(24, 24, 24);
+}
+div#previewArea.dark {
+    color: rgb(251, 251, 251);
+}
+#invert {
+    margin-bottom: 5px;
+    margin-left: 5px;
+    padding: 3px;
+    width: 50px;
+    border-radius: 2px;
+    font-size: 16px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+#invert.dark {
+    background-color: rgba(251, 251, 251, 0.507);
+    color:rgb(24, 24, 24, 0.507);
+}
+#invert.dark:hover {
+    background-color: rgba(251, 251, 251, 0.788);
+}
+#invert.light {
+    background-color: rgb(24, 24, 24, 0.507);
+    color: rgba(251, 251, 251, 0.507);
+}
+#invert.light:hover {
+    background-color: rgb(24, 24, 24, 0.788);
+}
 .moblur-ext_nocursor {
-    cursor: none;
+    cursor: none !important;
 }
 
 #moblur-ext_cursors-container {

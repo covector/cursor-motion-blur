@@ -1,4 +1,4 @@
-let samples, delay, duration, opacity, width, tradeoff, img;
+let samples, delay, duration, opacity, width, tradeoff, forcehide, img;
 
 function setConst () {
     samples = parseInt($("#samples").val());
@@ -7,6 +7,7 @@ function setConst () {
     opacity = parseFloat($("#opacity").val());
     width = $("#width").val();
     tradeoff = $("#tradeoff").prop("checked");
+    forcehide = $("#forcehide").prop("checked");
     img = $("#preview").attr("src");
 }
 
@@ -40,6 +41,12 @@ function initNoCursor() {
     else {
         $(".moblur-ext_cursor").first().css("opacity", opacity);
         $("#testing").removeClass("moblur-ext_nocursor");
+    }
+    if (tradeoff && forcehide) {
+        $("#invert").addClass("moblur-ext_nocursor");
+    }
+    else {
+        $("#invert").removeClass("moblur-ext_nocursor");
     }
 }
 
