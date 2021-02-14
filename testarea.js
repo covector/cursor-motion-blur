@@ -26,8 +26,9 @@ function initCursors() {
 }
 
 function updateCursors(e) {
+    let offset = $("#testing").offset();
     $(".moblur-ext_cursor").each(function(ind) {
-        gsap.to($(this), {duration, delay: ind * delay, x: e.clientX, y: e.clientY});
+        gsap.to($(this), {duration, delay: ind * delay, x: e.pageX - offset.left, y: e.pageY - offset.top});
     });
 }
 

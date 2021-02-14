@@ -69,6 +69,7 @@ div.vert {
     font-weight: inherit;
 }
 div#testing {
+    position: relative;
     margin-bottom: 40px;
     width: 500px;
     height: 350px;
