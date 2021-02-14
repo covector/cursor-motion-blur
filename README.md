@@ -1,6 +1,8 @@
 # Cursor Motion Blur
-This is a Chrome extension that adds motion blur to your cursor.<br />
-![Demo](docs-img/moblur.gif)<br />
+This is a Chrome extension that adds motion blur to your cursor.
+
+![Demo](docs-img/moblur.gif)
+
 [Options](#options)
 - [Cursor width](#cursor-width)
 - [Opacity](#opacity)
@@ -19,6 +21,8 @@ This is a Chrome extension that adds motion blur to your cursor.<br />
 - [QUOTA_BYTES_PER_ITEM quota exceeded](#quota_bytes_per_item-quota-exceeded)
 
 # Options
+Go to the options page by right clicking the icon and click "Options". This section is about what each of the option does.
+![How to go to options page](docs-img/gotooptions.gif)
 ## Cursor image
 The image of the blurred cursor. Default to Windows default white cursor.
 
@@ -76,6 +80,7 @@ Force hide real cursor set to false while Hide real cursor set to true. The arro
 ![Force hide real cursor unchecked, but hide real cursor checked](docs-img/moblur_force.gif)
 
 # Error Messages
+This section is about how to interpret error messages in the option page.
 ## XXXXX must be an image
 You have supplied a non-image file in the Cursor image option.
 
