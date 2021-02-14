@@ -64,3 +64,20 @@ Force hide real cursor set to false while Hide real cursor set to true. The arro
 ![Force hide real cursor unchecked, but hide real cursor checked](docs-img/moblur_force.gif)
 
 # Error Messages
+## XXXXX must be an image
+You have supplied a non-image file in the Cursor image option.
+
+## XXXXX must be a float
+You have supplied something that cannot be converted into a number using the [parseFloat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat) function.
+
+## XXXXX must be an integer
+You have supplied something that cannot be converted into an intger using the [parseInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt) function.
+
+## XXXXX is too large
+You have supplied a number that is too big.
+
+## XXXXX is too small
+You have supplied a number that is too small.
+
+## QUOTA_BYTES_PER_ITEM quota exceeded
+The image file you supplied in the Cursor image option is too large in size. The default cursor image is only 12 x 19 in pixel.
