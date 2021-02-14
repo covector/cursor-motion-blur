@@ -57,13 +57,13 @@ function initValues() {
     chrome.storage.sync.get((pref) => {
         for (let i = 0; i < inputOptions.length; i++) {
             let id = inputOptions[i];
-            initInput(id, pref[id]);
+            initInput(id, pref[id] ?? defaultVal[id] );
         }
         for (let i = 0; i < checkOptions.length; i++) {
             let id = checkOptions[i];
-            initCheck(id, pref[id]);
+            initCheck(id, pref[id] ?? defaultVal[id]);
         }
-        initImg(pref["img"]);
+        initImg(pref["img"] ?? defaultVal["img"]);
     });
 }
 
