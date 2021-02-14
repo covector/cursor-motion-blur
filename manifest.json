@@ -3,6 +3,12 @@
     "description": "Add motion blur to your cursor when using Chrome",
     "version": "1.0",
     "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "storage"
+    ],
     "content_scripts": [
         {
           "matches": ["http://*/*", "https://*/*"],
@@ -21,5 +27,14 @@
         "32": "/icons/moblur-icon_32.png",
         "48": "/icons/moblur-icon_48.png",
         "128": "/icons/moblur-icon_128.png"
-      }
+    },
+    "action": {
+        "default_icon": {
+            "16": "/icons/moblur-icon_16.png",
+            "32": "/icons/moblur-icon_32.png",
+            "48": "/icons/moblur-icon_48.png",
+            "128": "/icons/moblur-icon_128.png"
+        }
+    },
+    "options_page": "options.html"
   }

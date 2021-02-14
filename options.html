@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="lib/jquery.js"></script>
+    <script src="options.js"></script>
+    <title>Options</title>
+</head>
+<body>
+    <h1 style="padding-left: 30px">Options</h1>
+    <form style="padding-left: 30px">
+        <label for="img">Cursor image:</label><br>
+        <input type="file" name="img" id="img"><br>
+        <img id="preview" src="cursor.png" height="100px" style="image-rendering: pixelated"/><br>
+        <button type="button" id="img_button">Reset to Default</button><br><br>
+
+        <label for="width">Cursor width:</label><br>
+        <input type="text" id="width" name="width"><br>
+        <button type="button" id="width_button">Reset to Default</button><br><br>
+
+        <label for="opacity">Opacity:</label><br>
+        <input type="text" id="opacity" name="opacity"><br>
+        <button type="button" id="opacity_button">Reset to Default</button><br><br>
+
+        <label for="samples">Samples:</label><br>
+        <input type="text" id="samples" name="samples"><br>
+        <button type="button" id="samples_button">Reset to Default</button><br><br>
+
+        <label for="delay">Delay:</label><br>
+        <input type="text" id="delay" name="delay"><br>
+        <button type="button" id="delay_button">Reset to Default</button><br><br>
+
+        <label for="duration">Duration:</label><br>
+        <input type="text" id="duration" name="duration"><br>
+        <button type="button" id="duration_button">Reset to Default</button><br><br>
+
+        <input type="checkbox" id="tradeoff" name="tradeoff">
+        <label for="tradeoff"> Hide real cursor</label><br>
+        <button type="button" id="tradeoff_button">Reset to Default</button><br><br>
+        
+        <input type="checkbox" id="forcehide" name="forcehide">
+        <label for="forcehide"> Force hide real cursor</label><br>
+        <button type="button" id="forcehide_button">Reset to Default</button><br><br>
+
+        <button type="button" id="save_button">Save Changes</button>
+    </form>
+
+    <h1 style="padding-left: 30px">Explanations</h1>
+</body>
+</html>
