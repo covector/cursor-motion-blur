@@ -87,6 +87,7 @@ div#testing {
     color: white;
     text-align: center;
     transition: background-color 0.2s;
+    overflow: hidden;
 }
 div#testing.dark {
     background-color: rgb(24, 24, 24);
