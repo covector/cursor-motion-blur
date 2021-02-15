@@ -38,10 +38,22 @@ function initCursors() {
     }
 }
 
-function updateCursors(e) {
-    $(".moblur-ext_cursor").each(function(ind) {
-        gsap.to($(this), {duration, delay: ind * delay, x: e.clientX, y: e.clientY});
-    });
+let mouseMoved = false;
+function updateCursors() {
+    if (mouseMoved) {
+        $(".moblur-ext_cursor").each(function(ind) {
+            gsap.to($(this), {duration, delay: ind * delay, x: mousePos.x, y: mousePos.y});
+        });
+    }
+    mouseMoved = false;
+    window.requestAnimationFrame(updateCursors);
+}
+
+let mousePos = {x: 0, y: 0}
+function updateMousePos(e) {
+    mousePos.x = e.clientX;
+    mousePos.y = e.clientY;
+    mouseMoved = true;
 }
 
 function initNoCursor() {
@@ -62,7 +74,8 @@ async function init() {
         initContainer();
         initCursors();
         initNoCursor();
-        $(window).on("mousemove", updateCursors);
+        $(window).on("mousemove", updateMousePos);
+        window.requestAnimationFrame(updateCursors);
     }
 }
 

@@ -26,11 +26,23 @@ function initCursors() {
     }
 }
 
-function updateCursors(e) {
+let mouseMoved = false;
+function updateCursors() {
+    if (mouseMoved) {
+        $(".moblur-ext_cursor").each(function(ind) {
+            gsap.to($(this), {duration, delay: ind * delay, x: mousePos.x, y: mousePos.y});
+        });
+    }
+    mouseMoved = false;
+    window.requestAnimationFrame(updateCursors);
+}
+
+let mousePos = {x: 0, y: 0}
+function updateMousePos(e) {
     let offset = $("#testing").offset();
-    $(".moblur-ext_cursor").each(function(ind) {
-        gsap.to($(this), {duration, delay: ind * delay, x: e.pageX - offset.left, y: e.pageY - offset.top});
-    });
+    mousePos.x = e.pageX - offset.left;
+    mousePos.y = e.pageY - offset.top;
+    mouseMoved = true;
 }
 
 function initNoCursor() {
@@ -59,5 +71,6 @@ function updateArea() {
     setConst();
     initCursors();
     initNoCursor();
-    $("#testing").off("mousemove").on("mousemove", updateCursors);
+    $("#testing").off("mousemove").on("mousemove", updateMousePos);
+    window.requestAnimationFrame(updateCursors);
 }
