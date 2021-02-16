@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../lib/jquery.js"></script>
+    <script src="../lib/gsap.js"></script>
+    <script src="../options.js"></script>
+    <script src="demo.js"></script>
+    <script src="../testarea.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../options.css">
+    <title>Demo</title>
+</head>
+<body>
+    <h1>Motion Blur Demo</h1>
+    <form>
+        <div id="testing">
+            <div class="overlay">
+                <div id="previewArea">Put cursor in this box to try</div>
+                <div id="invert">Invert</div>
+            </div>
+        </div>
+        <h1 style="width:350px;text-align: center;border-bottom: solid 1px rgb(180, 180, 180); padding-bottom: 30px;">Options</h1>
+        <div class="vert">
+            <label class="title" for="img">Cursor image (Don't be too large)</label>
+            <input class="input" type="file" name="img" id="img">
+            <img id="preview" height="100px"/>
+            <button class="reset" type="button" id="img_button">Reset to Default</button>
+        </div>
+        <div class="vert">
+            <label class="title" for="width">Cursor width</label>
+            <input class="input inputBox" type="text" id="width" name="width">
+            <button class="reset" type="button" id="width_button">Reset to Default</button>
+        </div>
+        <div class="vert">
+            <label class="title" for="opacity">Opacity</label>
+            <input class="input inputBox" type="text" id="opacity" name="opacity">
+            <button class="reset" type="button" id="opacity_button">Reset to Default</button>
+        </div>
+        <div class="vert">
+            <label class="title" for="samples">Samples</label>
+            <input class="input inputBox" type="text" id="samples" name="samples">
+            <button class="reset" type="button" id="samples_button">Reset to Default</button>
+        </div>
+        <div class="vert">
+            <label class="title" for="delay">Delay</label>
+            <input class="input inputBox" type="text" id="delay" name="delay">
+            <button class="reset" type="button" id="delay_button">Reset to Default</button>
+        </div>
+        <div class="vert">
+            <label class="title" for="duration">Duration</label>
+            <input class="input inputBox" type="text" id="duration" name="duration">
+            <button class="reset" type="button" id="duration_button">Reset to Default</button>
+        </div>
+        <div class="vert">
+            <div>
+                <input class="input inputCheck" type="checkbox" id="tradeoff" name="tradeoff">
+                <label for="tradeoff"> Hide real cursor</label><br>
+            </div>
+            <button class="reset" type="button" id="tradeoff_button">Reset to Default</button>
+        </div>
+        <div class="vert">
+            <div>
+                <input class="input inputCheck" type="checkbox" id="forcehide" name="forcehide">
+                <label for="forcehide"> Force hide real cursor</label><br>
+            </div>
+            <button class="reset" type="button" id="forcehide_button">Reset to Default</button>
+        </div>
+    </form>
+</body>
+</html>

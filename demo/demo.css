@@ -1,0 +1,158 @@
+body {
+    font-family: Krub;
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(240, 240, 240);
+}
+img {
+    image-rendering: pixelated;
+    margin-bottom: 15px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(248, 248, 248);
+    width: 500px;
+    padding-bottom: 40px;
+    margin-bottom: 100px;
+}
+h1 {
+    font-weight: 600;
+    font-size: 40px;
+}
+div.vert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    width: 350px;
+    border-bottom: solid 1px rgb(180, 180, 180);
+}
+.input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.inputBox {
+    background-color: rgba(0, 0, 0, 0);
+    border-style: solid;
+    border-color: rgb(126, 126, 126);
+    border-width: 1px;
+}
+.reset {
+    font-size: 12px;
+    border-style: none;
+    background-color: rgb(221, 94, 94);
+    color: white;
+    padding: 8px 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: inherit;
+    transition: background-color 0.2s;
+}
+.reset:hover {
+    background-color: rgb(182, 79, 79);
+}
+.title {
+    margin-bottom: 20px;
+}
+.save {
+    border-style: none;
+    font-size: 16px;
+    background-color: rgb(94, 221, 122);
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: inherit;
+    transition: background-color 0.2s;
+}
+.save:hover {
+    background-color: rgb(77, 179, 99);
+}
+div#testing {
+    position: relative;
+    margin-bottom: 40px;
+    width: 500px;
+    height: 350px;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    transition: background-color 0.2s;
+    overflow: hidden;
+}
+div#testing.dark {
+    background-color: rgb(24, 24, 24);
+}
+div#testing.light {
+    background-color: rgb(251, 251, 251);
+}
+div.overlay {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+div#previewArea {
+    transition: color 0.2s;
+}
+div#previewArea.light {
+    color: rgb(24, 24, 24);
+}
+div#previewArea.dark {
+    color: rgb(251, 251, 251);
+}
+#invert {
+    margin-bottom: 5px;
+    margin-left: 5px;
+    padding: 3px;
+    width: 50px;
+    border-radius: 2px;
+    font-size: 16px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+#invert.dark {
+    background-color: rgba(251, 251, 251, 0.507);
+    color:rgb(24, 24, 24, 0.507);
+}
+#invert.dark:hover {
+    background-color: rgba(251, 251, 251, 0.788);
+}
+#invert.light {
+    background-color: rgb(24, 24, 24, 0.507);
+    color: rgba(251, 251, 251, 0.507);
+}
+#invert.light:hover {
+    background-color: rgb(24, 24, 24, 0.788);
+}
+.moblur-ext_nocursor {
+    cursor: none !important;
+}
+
+#moblur-ext_cursors-container {
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+
+.moblur-ext_cursor {
+    image-rendering: pixelated;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
