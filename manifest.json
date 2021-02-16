@@ -12,6 +12,7 @@
     "content_scripts": [
         {
           "matches": ["http://*/*", "https://*/*"],
+          "exclude_matches": ["https://covector.github.io/cursor-motion-blur/demo/"],
           "css": ["moblur-style.css"],
           "js": ["lib/jquery.js", "lib/gsap.js", "moblur-script.js"],
           "run_at": "document_idle"
