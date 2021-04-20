@@ -90,7 +90,7 @@ Duration is set to 0.1
 ![Duration set to 0.1](docs-img/moblur_duration.gif)
 
 ## Hide real cursor
-Whether to hide the real cursor and pretend the first image is the actual cursor. When this is checked, the motion blur effect will look better but there will be some mouse input delay. When this is unchecked, the images will lag behind a bit (see example), but there will not be input delay. Default to true.
+Whether to hide the real cursor and pretend the first image is the actual cursor. When this is checked, the motion blur effect will look better but there will be some mouse movement delay. When this is unchecked, the images will lag behind a bit (see example), but there will not be input delay. Default to true.
 
 **Example:**<br />
 Hide real cursor set to false
