@@ -1,9 +1,11 @@
 # Cursor Motion Blur
 This is a Chrome extension that adds motion blur to your cursor.<br />
-[Go to the demo page to test it out](https://covector.github.io/cursor-motion-blur/demo/)
+[Go to the demo page to test it out](https://covector.github.io/cursor-motion-blur/demo/)<br />
+[Install it on Chrome Web Store](https://chrome.google.com/webstore/detail/cursor-motion-blur/afehkdebfodlbdmohfkiocgjehoendfd)
 
 ![Demo](docs-img/moblur.gif)
 
+[Installation](#installation)
 [Options](#options)
 - [Cursor width](#cursor-width)
 - [Opacity](#opacity)
@@ -21,8 +23,21 @@ This is a Chrome extension that adds motion blur to your cursor.<br />
 - [XXXXX is too small](#xxxxx-is-too-small)
 - [QUOTA_BYTES_PER_ITEM quota exceeded](#quota_bytes_per_item-quota-exceeded)
 
+# Installation
+This extension has been published to [Chrome Web Store](https://chrome.google.com/webstore/detail/cursor-motion-blur/afehkdebfodlbdmohfkiocgjehoendfd)
+
+![Installing the extension](docs-img/install.gif)
+
+After installing the extension, you can activate the extension by clicking it in the Extensions menu. You will see either "ON" or "OFF" on the icon, it indicates whether the extension is activated or not. Clicking the extension will toggle it on or off.
+
+![Toggling the extension](docs-img/toggle.gif)
+
+After you enabled it, refresh a webpage and the motion blur effect will be present.
+
+![Refreshing a page](docs-img/refresh.gif)
+
 # Options
-Go to the options page by right clicking the icon and click "Options". This section is about what each of the option does.
+Go to the options page by selecting "Options" in the 3-dots menu from the Extensions menu. This section is about what each of the option does.
 
 ![How to go to options page](docs-img/gotooptions.gif)
 ## Cursor image
