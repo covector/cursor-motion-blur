@@ -60,10 +60,10 @@ function initNoCursor() {
     if (tradeoff) {
         $(".moblur-ext_cursor").first().css("opacity", "1");
         if (forcehide) {
-            $("*").addClass("moblur-ext_nocursor");
+            $("*").css("cursor", "none");
         }
         else {
-            $("html").addClass("moblur-ext_nocursor");
+            $("html").css("cursor", "none");
         }
     }
 }
