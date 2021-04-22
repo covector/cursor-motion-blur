@@ -3,7 +3,7 @@ This is a Chrome extension that adds motion blur to your cursor.<br />
 This implementation is nowhere near optimal, so contribution to make this a better extension is very well appreciated.<br />
 If you want, you can even fork this repository and make your own implementation.
 
-[![](docs-img/demo-button.png)](https://covector.github.io/cursor-motion-blur/demo/) [![](docs-img/web-store-button.png)](https://chrome.google.com/webstore/detail/cursor-motion-blur/afehkdebfodlbdmohfkiocgjehoendfd)
+[![Demo page button](docs-img/demo-button.png)](https://covector.github.io/cursor-motion-blur/demo/) [![Web store button](docs-img/web-store-button.png)](https://chrome.google.com/webstore/detail/cursor-motion-blur/afehkdebfodlbdmohfkiocgjehoendfd)
 
 ![Demo](docs-img/moblur.gif)
 
@@ -41,7 +41,16 @@ After you enabled it, refresh a webpage and the motion blur effect will be prese
 # Options
 Go to the options page by selecting "Options" in the 3-dots menu from the Extensions menu. In the following, the options will be explained one by one.
 
-![How to go to options page](docs-img/options/gifs/gotooptions.gif)
+![How to go to options page](docs-img/options/gotooptions.gif)
+
+You will be able to customize the motion blur here. There is a live preview area for you to test out different settings. Whenever you press enter after typing in one of the text boxes, or when you toggle any of the checkboxes, the motion blur effect in the preview area will update instantly.
+
+![Live preview box](docs-img/options/live-preview.png)
+
+After you finish customizing the effect, you can press the "Save Changes" button at the very bottom of the page.
+
+In the following, the options will be explained one by one.
+
 ## Cursor image
 The image (this "image" refers to the multimedia image) for the images (this "image refers to the translucent fake cursors behind the real cursor) trailing behind. Default to an image of Windows default white cursor (12 x 19 pixel).
 
